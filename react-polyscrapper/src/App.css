@@ -1,0 +1,213 @@
+
+.market-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.market-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.market-item .market-question {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.see-more-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.hover-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.markets-content {
+  background-color: #ffffff; /* White background for the content */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadows for a cleaner look */
+  margin-bottom: 30px;
+}
+
+/* Style for the MarketItem hover effect */
+.hover-card:hover {
+  background-color: #e9ecef; /* Lighter hover effect */
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #343a40; /* Darker text for contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #218838; /* Green accent for buttons */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Card and List Styling */
+.card-body {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Adjusting modal's title and description */
+h5, h6 {
+  color: #343a40; /* Dark text for readability */
+}
+
+.list-group-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Badge customization */
+.badge {
+  font-size: 0.9rem;
+}
+
+/* Light, clean style for MarketItem hover effect */
+.hover-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #343a40;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  visibility: visible; 
+}
+
+.spinner-border {
+  color: #28a745;
+  animation: spin 1s linear infinite;
+  z-index: 9999; 
+  position: relative;
+}
+
+.markets-container {
+  background-color: white;
+  min-height: 100vh;
+  padding: 20px;
+  animation: none; 
+}
+
+.modal-content {
+  background-color: #ffffff;
+  animation: fadeInUp 0.5s ease-in-out;
+  z-index: 1050;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-element {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Market item container */
+.market-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on market items */
+.market-item:hover {
+  transform: translateY(-5px);
+  background-color: #f1f1f1;
+}
+
+/* Styling for the market name */
+.market-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #343a40;
+  margin-left: 10px; /* Add some space between the icon and the text */
+}
+
+/* Market icon styling */
+.market-icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  border-radius: 50%; /* Optional: If you want the icon to be circular */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+/* Image styling in the modal header */
+.market-detail-image {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image does not stretch */
+  margin-right: 15px;
+}
+
+/* Optional: You can adjust the size of the modal title to align better */
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
