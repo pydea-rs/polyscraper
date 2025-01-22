@@ -5,7 +5,8 @@ import { Button, Spinner, Container } from 'react-bootstrap';
 const MarketList = ({ markets, onMarketClick, onLoadMore, isLoading }) => {
   return (
     <Container fluid className="markets-container">
-      <h1 className="text-center mb-4 text-primary">Poly Market List</h1>
+      <h1 className="text-center mb-4 text-primary">Poly Market List <sub className='text-secondary text-bold' style={{fontSize: '40%'}}>(CTRL+Click To Select)</sub></h1>
+      
       <div className="markets-content">
         {!isLoading && !markets?.length ? (
           <p className="text-center text-muted">No markets available.</p>
