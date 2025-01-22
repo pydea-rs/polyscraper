@@ -37,8 +37,8 @@ const App = () => {
     loadMarkets();
   }, []);
 
-  const handleMarketClick = (event, market) => {
-    if (event.ctrlKey) {
+  const handleMarketClick = (event, market, isLongClick) => {
+    if (event.ctrlKey || isLongClick) {
       if (exportSelection.length) {
         const index = exportSelection.findIndex(
           (item) =>
