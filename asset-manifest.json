@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/polyscraper/static/css/main.a20d90ba.css",
+    "main.js": "/polyscraper/static/js/main.259e1e2a.js",
+    "index.html": "/polyscraper/index.html",
+    "main.a20d90ba.css.map": "/polyscraper/static/css/main.a20d90ba.css.map",
+    "main.259e1e2a.js.map": "/polyscraper/static/js/main.259e1e2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a20d90ba.css",
+    "static/js/main.259e1e2a.js"
+  ]
+}
