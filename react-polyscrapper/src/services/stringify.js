@@ -26,3 +26,6 @@ export const anythingToString = (data) => {
   if (typeof data === "object") return objectToString(data);
   return data.toString();
 };
+
+export const sanitizeFilename = (filename) =>
+  filename.replace(/[\\\/:*?"<>|]/g, "_");

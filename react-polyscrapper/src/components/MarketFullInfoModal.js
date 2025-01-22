@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Button, ListGroup, Row, Col } from "react-bootstrap";
 import { anythingToString, toCapitalCase } from "../services/stringify";
+import { exportToExcel } from "../services/excel";
 
 const MarketFullInfoModal = ({ isOpen, children: market, onClose }) => {
   return (
@@ -43,9 +44,20 @@ const MarketFullInfoModal = ({ isOpen, children: market, onClose }) => {
         </ListGroup>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
-          Close
-        </Button>
+        <Col>
+          <Button variant="success" onClick={() => exportToExcel([market], market.question, 'Single Poly Market')}>
+            Save As Excel
+          </Button>
+        </Col>
+        <Col>
+          <Button
+            style={{ float: "right" }}
+            variant="secondary"
+            onClick={onClose}
+          >
+            Close
+          </Button>
+        </Col>
       </Modal.Footer>
     </Modal>
   );

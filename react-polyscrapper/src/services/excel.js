@@ -1,5 +1,5 @@
 import * as XLSX from "xlsx";
-import { arrayToString, objectToString } from "./stringify";
+import { arrayToString, objectToString, sanitizeFilename } from "./stringify";
 
 export const exportToExcel = (
   data,
@@ -27,5 +27,5 @@ export const exportToExcel = (
   const ws = XLSX.utils.json_to_sheet(formattedData);
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, sheetName);
-  XLSX.writeFile(wb, `${fileName}.xlsx`);
+  XLSX.writeFile(wb, `${sanitizeFilename(fileName)}.xlsx`);
 };
