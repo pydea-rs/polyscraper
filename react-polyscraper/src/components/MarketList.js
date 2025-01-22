@@ -7,7 +7,7 @@ const MarketList = ({ markets, onMarketClick, onLoadMore, isLoading }) => {
     <Container fluid className="markets-container">
       <h1 className="text-center mb-4 text-primary">Poly Market List</h1>
       <div className="markets-content">
-        {markets.length === 0 ? (
+        {!isLoading && !markets?.length ? (
           <p className="text-center text-muted">No markets available.</p>
         ) : (
           <div className="list-group">
