@@ -12,7 +12,7 @@ const MarketList = ({ markets, onMarketClick, onLoadMore, isLoading }) => {
         ) : (
           <div className="list-group">
             {markets.map((market, index) => (
-              <MarketItem key={index} market={market} onClick={() => onMarketClick(market)} />
+              <MarketItem key={index} market={market} onClick={(e) => onMarketClick(e, market)} />
             ))}
           </div>
         )}

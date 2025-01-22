@@ -13,6 +13,7 @@ const App = () => {
   const [selectedMarket, setSelectedMarket] = useState(null);
   const [loading, setLoading] = useState(false);
   const [enableExport, setEnableExport] = useState(false);
+  const [exportSelection, setExportSelection] = useState([]);
 
   const loadMarkets = async (cursor = null) => {
     setLoading(true);
@@ -36,8 +37,25 @@ const App = () => {
     loadMarkets();
   }, []);
 
-  const handleMarketClick = (market) => {
-    setSelectedMarket(market);
+  const handleMarketClick = (event, market) => {
+    if (event.ctrlKey) {
+      if (exportSelection.length) {
+        const index = exportSelection.findIndex(
+          (item) =>
+            item.question === market.question &&
+            item.question_id === market.question_id &&
+            item.condition_id === market.condition_id
+        );
+        if (index !== -1) {
+          setExportSelection(exportSelection.filter((_, i) => i !== index));
+          return false;
+        }
+      }
+      setExportSelection(exportSelection => ([...exportSelection, market]));
+      return true;
+    } else {
+      setSelectedMarket(market);
+    }
   };
 
   const handleCloseModal = () => {
@@ -52,7 +70,8 @@ const App = () => {
 
   const handleExport = () => {
     try {
-      exportToExcel(markets, `poly.${markets.length}-markets.${Date.now()}`);
+      const targetNamePrefix = exportSelection?.length ? `${exportSelection.length}-selected` : `poly.${markets.length}`;
+      exportToExcel(exportSelection?.length ? exportSelection : markets, `${targetNamePrefix}-markets.${Date.now()}`);
     } catch (ex) {
       console.error(ex);
     }
